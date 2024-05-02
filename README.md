@@ -12,12 +12,6 @@ This script is to create group and properties in HubSpot.
 
 ### Installation
 
-```sh
-$ git clone git@github.com:kkznch/script-hubspot-property-maker.git
-$ cd script-hubspot-property-maker
-$ pnpm install
-```
-
 1. Get a free Access Token at HubSpot
    1. For example, when you create `contacts` property, you should set read and write permission to `crm.objects.contacts` in HubSpot Access Token Schema
 2. Clone the repo
@@ -42,13 +36,13 @@ $ pnpm install
    const hubspotGroup = {
      objectType: 'contacts',
      name: 'new_group',
-     label: '新しいグループ',
+     label: 'New Group',
    };
    const hubspotProperties = [
      {
        groupName: hubspotGroup.name,
        name: 'new_property',
-       label: '新しいプロパティ',
+       label: 'new Property',
        type: PropertyCreateTypeEnum.String,
        fieldType: PropertyCreateFieldTypeEnum.Text,
      },
